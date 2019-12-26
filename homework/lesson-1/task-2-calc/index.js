@@ -3,8 +3,10 @@ class Calculator {
     rightOperand = 0;
 
     read() {
-        this.leftOperand = prompt('Enter first value') || this.leftOperand;
-        this.rightOperand = prompt('Enter second value') || this.rightOperand;
+        var inputLeftOperand = prompt('Enter first value');
+        var inputRightOperand = prompt('Enter second value');
+        this.leftOperand = inputLeftOperand ? Number(inputLeftOperand) : this.leftOperand;
+        this.rightOperand = inputRightOperand ? Number(inputRightOperand) : this.rightOperand;
     }
 
     add() {
